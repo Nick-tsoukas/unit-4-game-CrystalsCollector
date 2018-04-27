@@ -1,6 +1,6 @@
 $(function() {
   var num = $('#randomNum');
-  num[0].innerText = `${getRandomNumberUpToo120()}`;
+  num[0].innerHTML = `<h2 class="red">${getRandomNumberUpToo120()}</h1>`;
   var allImages = Array.from($('img'));
 
   function getRandomNumberUpToo120() {
