@@ -1,0 +1,9 @@
+img.my_image {
+  max-height: 300px !important;
+}
+
+.box {
+  height: 300px;
+  width: 100%;
+  background: red;
+}
