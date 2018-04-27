@@ -7,3 +7,23 @@ img.my_image {
   width: 100%;
   background: red;
 }
+
+.gem {
+  max-width: 100%;
+}
+
+.win_loss_grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.large_text {
+  font-size:2em;
+}
+
+.grid_center_item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}

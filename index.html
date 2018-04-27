@@ -4,9 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title></title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/main.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -50,37 +54,55 @@
   <!-- End of text content for instructions -->
 
   <!-- Game interface starts here  -->
+
   <div class="container">
     <div class="row">
+
+      <!-- random number box -->
       <div class="col s6">
         <h5>Random Number</h1>
-          <div class="box">
-
-          </div>
+          <div class="box grid_center_item">
+            <h5 id="randomNum"></h5>
       </div>
-      <div class="col s6">
-        <h5>Win or Lose</h1>
-          <div class="box">
+    </div>
+    <!-- end of random number box   -->
 
+    <!-- wins and losses columns  -->
+    <div class="col s6">
+      <h5>Win or Lose</h1>
+          <div class="box win_loss_grid">
+            <!-- Number of wins box  -->
+            <div class="win">
+              <span class="large_text">Wins :</span>
+              <span class="large_text">0</span>
+            </div>
+
+            <!-- Number of losses -->
+            <div class="loss">
+              <span class="large_text">Losses : </span>
+              <span class="large_text">0</span>
+            </div>
           </div>
+
       </div>
+      <!-- end of win loss column  -->
     </div>
   </div>
 
   <!-- the crystals users can click on  -->
   <div class="container">
-    <div class="row">
+    <div class="row gems">
       <div class="col s3">
-        <p>1</p>
+        <img data-gem1 class="gem" src="assets/images/gemBlue.png" alt="">
       </div>
       <div class="col s3">
-        <p>2</p>
+        <img data-gem2 class="gem" src="assets/images/gemBlue.png" alt="">
       </div>
       <div class="col s3">
-        <p>3</p>
+        <img data-gem3 class="gem" src="assets/images/gemBlue.png" alt="">
       </div>
       <div class="col s3">
-        <p>4</p>
+        <img data-gem3 class="gem" src="assets/images/gemBlue.png" alt="">
       </div>
     </div>
   </div>
@@ -90,11 +112,9 @@
   <!-- Game interface ends here -->
 
 
-
-
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="./assets/javascript/game.js"></script>
+
 </body>
 
 </html>
