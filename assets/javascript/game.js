@@ -1,7 +1,15 @@
 $(function() {
   var num = $('#randomNum');
-  num[0].innerHTML = `<h2 class="red">${getRandomNumberUpToo120()}</h1>`;
+  num[0].innerHTML = `<h2 class="">${getRandomNumberUpToo120()}</h1>`;
   var allImages = Array.from($('img'));
+
+  function fourCyrystals(randomNumber){
+    allImages.forEach(function(image,index,array) {
+      console.log(image)
+    })
+  }
+
+  fourCyrystals(getRandomNumberUpToo120())
 
   function getRandomNumberUpToo120() {
     var num = Math.floor((Math.random() * 120)) + 1;

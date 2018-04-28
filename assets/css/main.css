@@ -1,9 +1,16 @@
+html.body {
+  height: 100%;
+}
 * {
-  color: green;
+  /* color: green; */
 }
 
 body {
-  background: #1B131A;
+  /* background: #1B131A; */
+}
+
+h2 {
+  color: red;
 }
 
 img.my_image {
@@ -11,7 +18,7 @@ img.my_image {
 }
 
 .box {
-  height: 300px;
+  /* height: 300px; */
   width: 100%;
 }
 
@@ -46,12 +53,12 @@ img.my_image {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  background: #1B131A;
-  color: white;
+  /* background: #1B131A; */
+  /* color: white; */
   /* play color */
-  background: #1B131A !important;
+  /* background: #1B131A !important; */
 }
 
 .white {
-  background: #1B131A !important;
+  /* background: #1B131A !important; */
 }
