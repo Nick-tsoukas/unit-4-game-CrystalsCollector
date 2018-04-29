@@ -19,6 +19,7 @@ function addTooScore(num) {
   } else  if(myScore > parseInt(ran.innerText)){
     loss++;
     console.log(loss);
+    window.location.reload(true);
   }
 }
 
