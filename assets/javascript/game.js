@@ -28,8 +28,8 @@ function addClickEvent(array, someFunction) {
   array.forEach(function(item) {
     item.addEventListener('click', function() {
       myScore += parseInt($(this).attr('data-number'));
+      console.log($(this).addClass('some'));
       someFunction(myScore);
-      // console.log(myScore)
     })
   })
 }
@@ -57,6 +57,7 @@ $(function() {
 
     addNumberToGem();
     addClickEvent(allImages,addTooScore);
+
 
 
 });

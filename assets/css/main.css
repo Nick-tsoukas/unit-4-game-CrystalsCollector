@@ -30,6 +30,7 @@ img.my_image {
 
 .gem {
   max-width: 100%;
+  transition: all linear 1s;
 }
 
 .win_loss_grid {
@@ -61,6 +62,10 @@ img.my_image {
 
 .white {
   /* background: #1B131A !important; */
+}
+
+.some {
+  transform: scale(0.7);
 }
 
 .score_box {
