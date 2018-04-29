@@ -1,29 +1,42 @@
+var score = document.getElementById('score');
+var myScore = 0;
+function addTooScore(num) {
+  score.innerHTML = num
+}
+
+function addClickEvent(array, someFunction) {
+  array.forEach(function(item) {
+    item.addEventListener('click', function() {
+       myScore += parseInt($(this).attr('data-number'));
+      console.log(myScore);
+      someFunction(myScore);
+    })
+  })
+}
+
+// add number to gems
+function addNumberToGem() {
+  $.each($('.gem'), function(index, item) {
+    $(item).attr('data-number', randomNum(12));
+    console.log(item)
+  });
+}
+
+// Just gens a random number
+function randomNum(num) {
+  var randomNumber = Math.floor((Math.random() * (`${num}`)) + 1);
+  return randomNumber;
+}
+
+// on document ready
 $(function() {
+
   var num = $('#randomNum');
-  num[0].innerHTML = `<h2 class="">${getRandomNumberUpToo120()}</h1>`;
-  var allImages = Array.from($('img'));
+  num[0].innerHTML = `<h1 class="">${randomNum(50)}</h1>`;
 
-  function fourCyrystals(randomNumber){
-    allImages.forEach(function(image,index,array) {
-      console.log(image)
-    })
-  }
+  var allImages = Array.from($('.gem'));
 
-  fourCyrystals(getRandomNumberUpToo120())
+  addNumberToGem();
+  addClickEvent(allImages,addTooScore)
 
-  function getRandomNumberUpToo120() {
-    var num = Math.floor((Math.random() * 120)) + 1;
-    return num;
-  };
-
-  function randomNumUpToo12() {
-    var crystalNumber = Math.floor((Math.random() * 12)) + 1;
-    return crystalNumber;
-  }
-
-  function addDataType(array,index,array) {
-    array.forEach(function() {
-
-    })
-  }
 });

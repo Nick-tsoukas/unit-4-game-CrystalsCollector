@@ -62,3 +62,9 @@ img.my_image {
 .white {
   /* background: #1B131A !important; */
 }
+
+.score_box {
+  height: 300px;
+  width:100%;
+  background: red;
+}
