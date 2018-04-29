@@ -1,15 +1,34 @@
 var score = document.getElementById('score');
+var numberOfWins = document.getElementById('numberOfWins');
+var numberOfLoss = document.getElementById('numberOfLoss');
 var myScore = 0;
+var target;
+
+var win = 0;
+var loss = 0;
+
+
 function addTooScore(num) {
-  score.innerHTML = num
+  score.innerHTML = num;
+  var ran = document.getElementById('randomNum');
+  if(parseInt(ran.innerText) === myScore){
+    win++;
+    numberOfWins.innerText = win;
+    console.log('you won',win);
+
+  } else  if(myScore > parseInt(ran.innerText)){
+    loss++;
+    console.log(loss);
+  }
 }
+
 
 function addClickEvent(array, someFunction) {
   array.forEach(function(item) {
     item.addEventListener('click', function() {
-       myScore += parseInt($(this).attr('data-number'));
-      console.log(myScore);
+      myScore += parseInt($(this).attr('data-number'));
       someFunction(myScore);
+      // console.log(myScore)
     })
   })
 }
@@ -18,7 +37,6 @@ function addClickEvent(array, someFunction) {
 function addNumberToGem() {
   $.each($('.gem'), function(index, item) {
     $(item).attr('data-number', randomNum(12));
-    console.log(item)
   });
 }
 
@@ -31,12 +49,13 @@ function randomNum(num) {
 // on document ready
 $(function() {
 
-  var num = $('#randomNum');
-  num[0].innerHTML = `<h1 class="">${randomNum(50)}</h1>`;
+    var num = $('#randomNum');
+    num[0].innerHTML = `<h1 class="">${randomNum(50)}</h1>`;
+    var random = parseInt(num[0].innerText);
+    var allImages = Array.from($('.gem'));
 
-  var allImages = Array.from($('.gem'));
+    addNumberToGem();
+    addClickEvent(allImages,addTooScore);
 
-  addNumberToGem();
-  addClickEvent(allImages,addTooScore)
 
 });
