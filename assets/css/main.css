@@ -41,14 +41,9 @@ img.my_image {
   align-items: center;
 }
 
-/* #gray_box {
-  width: 100%;
-  margin-left: auto;
-  left: auto;
-  right: auto;
+.gray_box {
   background: #F0F0F0 !important;
-  color: white;
-} */
+}
 
 .large_text {
   font-size: 2em;
@@ -89,7 +84,7 @@ img.my_image {
 }
 
 .card.horizontal .card-image img {
-  transform: scale(2);
+  transform: scale(1.5);
 }
 
 #numberOfWins {
