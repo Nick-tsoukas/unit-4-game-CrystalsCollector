@@ -3,7 +3,6 @@ var numberOfWins = document.getElementById('numberOfWins');
 var numberOfLoss = document.getElementById('numberOfLoss');
 var myScore = 0;
 var target;
-
 var win = 0;
 var loss = 0;
 
@@ -14,12 +13,23 @@ function addTooScore(num) {
   if(parseInt(ran.innerText) === myScore){
     win++;
     numberOfWins.innerText = win;
+    myScore = 0;
     console.log('you won',win);
+    var num = $('#randomNum');
+    num[0].innerHTML = `<h1 class="">${randomNum(50)}</h1>`;
+    var random = parseInt(num[0].innerText);
+    score.innerHTML = myScore;
 
   } else  if(myScore > parseInt(ran.innerText)){
     loss++;
+    numberOfLoss.innerHTML = loss;
     console.log(loss);
-    window.location.reload(true);
+    myScore = 0;
+    score.innerHTML = myScore;
+    var num = $('#randomNum');
+    num[0].innerHTML = `<h1 class="">${randomNum(50)}</h1>`;
+    var random = parseInt(num[0].innerText);
+    // window.location.reload(true);
   }
 }
 

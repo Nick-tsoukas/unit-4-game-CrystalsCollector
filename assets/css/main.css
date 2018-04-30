@@ -1,8 +1,9 @@
 html.body {
   height: 100%;
 }
+
 * {
-  /* color: green; */
+  font-family: 'Work Sans', sans-serif;
 }
 
 body {
@@ -10,7 +11,8 @@ body {
 }
 
 h2 {
-  color: red;
+  color: #ee6e73;
+  font-weight: bold;
 }
 
 img.my_image {
@@ -23,9 +25,9 @@ img.my_image {
 }
 
 .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
-    /* -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); */
-    /* box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); */
-    box-shadow: none;
+  /* -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); */
+  /* box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); */
+  box-shadow: none;
 }
 
 .gem {
@@ -38,6 +40,15 @@ img.my_image {
   justify-content: flex-start;
   align-items: center;
 }
+
+/* #gray_box {
+  width: 100%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+  background: #F0F0F0 !important;
+  color: white;
+} */
 
 .large_text {
   font-size: 2em;
@@ -70,9 +81,21 @@ img.my_image {
 
 .score_box {
   height: 200px;
-  width:100%;
-  background: ;
+  width: 100%;
+  background: #F0F0F0;
   display: grid;
   justify-content: center;
-  align-items: center;
+  align-items: top;
+}
+
+.card.horizontal .card-image img {
+  transform: scale(2);
+}
+
+#numberOfWins {
+  color: red;
+}
+
+#numberOfLoss {
+  color: red;
 }
