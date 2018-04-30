@@ -14,9 +14,8 @@ function addTooScore(num) {
     win++;
     numberOfWins.innerText = win;
     myScore = 0;
-    console.log('you won',win);
     var num = $('#randomNum');
-    num[0].innerHTML = `<h1 class="">${randomNum(50)}</h1>`;
+    num[0].innerHTML = `<h1 class="numberFont">${randomNum(50)}</h1>`;
     var random = parseInt(num[0].innerText);
     score.innerHTML = myScore;
 
@@ -29,7 +28,6 @@ function addTooScore(num) {
     var num = $('#randomNum');
     num[0].innerHTML = `<h1 class="">${randomNum(50)}</h1>`;
     var random = parseInt(num[0].innerText);
-    // window.location.reload(true);
   }
 }
 
@@ -38,6 +36,15 @@ function addClickEvent(array, someFunction) {
   array.forEach(function(item) {
     item.addEventListener('click', function() {
       myScore += parseInt($(this).attr('data-number'));
+      // add and remove class to scale crystals ====================
+      if($(this).attr('class').length === 3){
+        $(this).addClass('scaleSmall');
+      } else {
+         $(this).removeClass("scaleSmall");
+      }
+
+      // End of add and remove class to scale crystals ====================
+
       someFunction(myScore);
     })
   })
@@ -60,7 +67,7 @@ function randomNum(num) {
 $(function() {
 
     var num = $('#randomNum');
-    num[0].innerHTML = `<h1 class="">${randomNum(50)}</h1>`;
+    num[0].innerHTML = `<h1 class="numberFont">${randomNum(50)}</h1>`;
     var random = parseInt(num[0].innerText);
     var allImages = Array.from($('.gem'));
 
